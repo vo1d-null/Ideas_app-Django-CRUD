@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Idea List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+    <h1>Idea List</h1>
+    <ul>
+        {% for idea in ideas %}
+            <li>
+                <a href="{% url 'idea_detail' pk=idea.pk %}" class"idea">{{ idea.title }}</a>
+                <a href="{% url 'idea_update' pk=idea.pk %}" class"update">Update</a>
+                <a href="{% url 'idea_delete' pk=idea.pk %}" class"delete">Delete</a>
+            </li>
+        {% endfor %}
+        <a href="{% url 'idea_create' %}"class"create">Add New Idea</a>
+    </ul>
+</body>
+</html>

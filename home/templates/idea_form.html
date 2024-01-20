@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if form.instance.pk %}Update Idea{% else %}Create New Idea{% endif %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+    <h1 class="{% if form.instance.pk %}update-idea{% else %}create-idea{% endif %}">
+        {% if form.instance.pk %}Update Idea{% else %}Create New Idea{% endif %}
+    </h1>
+    <form method="post" enctype="multipart/form-data" class="{% if form.instance.pk %}update-idea-form{% else %}create-idea-form{% endif %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

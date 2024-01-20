@@ -1,0 +1,18 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Idea Detail</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+    <h1>{{ idea.title }}</h1>
+    <p>{{ idea.description }}</p>
+    <img src="{{ idea.image.url }}" alt="{{ idea.title }} Image">
+    <p>Progress: {{ idea.progress }}%</p>
+    <a href="{% url 'idea_update' pk=idea.pk %}" class="update">Update</a>
+    <a href="{% url 'idea_delete' pk=idea.pk %}" class="delete">Delete</a>
+    <a href="{% url 'idea_list' %}" class="back">Back to Idea List</a>    
+</body>
+</html>
