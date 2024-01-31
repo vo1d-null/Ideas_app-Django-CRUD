@@ -76,3 +76,17 @@ Example:` (project_venv) C:\Users\vo1d\Desktop\django_project> python manage.py 
 It usually runs on `http://127.0.0.1:8000/` or `http://localhost:8000/`
 
 # Congratulations! The Django project setup is complete.
+
+# If you want to run the virtual enviroment on powershell instead of the command prompt 
+# Follow these steps : 
+# Open PowerShell as Administrator: Right-click on the PowerShell icon and select "Run as Administrator" from the context menu.
+#
+# Set Execution Policy: In the elevated PowerShell window, you can set the execution policy to allow scripts to run. For example, to set the execution policy to allow local scripts to run, you can use the following command:
+# 
+# `Set-ExecutionPolicy RemoteSigned`
+# This command allows the execution of locally created scripts, but requires downloaded scripts to be signed by a trusted publisher.
+#
+# Confirm the Change: You will likely be prompted to confirm the change. Type "Y" (for Yes) and press Enter.
+# After changing the execution policy, you should be able to run the activation script for your virtual environment without encountering the error message. 
+# However, keep in mind that changing the execution policy can have security implications.
+# You can change it again after finished working on the project.
