@@ -58,7 +58,7 @@ Example: `python -m venv {project_venv}`
 Example: C:\Users\vo1d\Desktop\django_project> {project_venv}\Scripts\activate
 
 # Step 4: Install Django
-Example: (project_venv) C:\Users\vo1d\Desktop\django_project> pip install django
+Example:` (project_venv) C:\Users\vo1d\Desktop\django_project> pip install django`
 
 # Step 5: Create a new Django project
 Example: (project_venv) C:\Users\vo1d\Desktop\django_project> django-admin.py startproject {project_name} .
